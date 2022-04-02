@@ -1,4 +1,4 @@
--- Revert derp-books-db:users from pg
+-- Revert derp-books-db:table/users from pg
 
 BEGIN;
 

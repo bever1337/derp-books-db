@@ -1,7 +1,7 @@
--- Deploy derp-books-db:journal_entries to pg
--- requires: schema_derp_books
--- requires: accounts
--- requires: stacks
+-- Deploy derp-books-db:table/journal_entries to pg
+-- requires: schema/derp_books
+-- requires: table/stacks
+-- requires: table/accounts
 
 BEGIN;
 

@@ -1,4 +1,4 @@
--- Verify derp-books-db:xref_users_stacks on pg
+-- Verify derp-books-db:table/xref_users_stacks on pg
 
 BEGIN;
 

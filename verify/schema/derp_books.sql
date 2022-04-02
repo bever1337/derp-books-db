@@ -1,4 +1,4 @@
--- Verify derp-books-db:schema_derp_books on pg
+-- Verify derp-books-db:schema/derp_books on pg
 
 BEGIN;
 

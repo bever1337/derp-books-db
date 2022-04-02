@@ -1,4 +1,4 @@
--- Revert derp-books-db:xref_users_stacks from pg
+-- Revert derp-books-db:table/xref_users_stacks from pg
 
 BEGIN;
 

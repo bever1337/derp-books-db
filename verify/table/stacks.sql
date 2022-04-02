@@ -1,4 +1,4 @@
--- Verify derp-books-db:stacks on pg
+-- Verify derp-books-db:table/stacks on pg
 
 BEGIN;
 

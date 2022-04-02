@@ -1,6 +1,6 @@
--- Deploy derp-books-db:accounts to pg
--- requires: schema_derp_books
--- requires: stacks
+-- Deploy derp-books-db:table/accounts to pg
+-- requires: schema/derp_books
+-- requires: table/stacks
 
 BEGIN;
 
