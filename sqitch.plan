@@ -2,10 +2,10 @@
 %project=derp-books-db
 %uri=https://github.com/bever1337/derp-books-db
 
-schema_derp_books 2022-03-31T21:14:35Z Bever1337 <parallels@parallels-Parallels-Virtual-Platform> # Adds schema for derp-books-db
-users 2022-03-31T23:39:19Z derp <parallels@parallels-Parallels-Virtual-Platform> # Adds user table
-stacks 2022-03-31T23:57:12Z derp <parallels@parallels-Parallels-Virtual-Platform> # Adds stacks table
-xref_users_stacks [stacks users] 2022-04-01T00:56:16Z derp <parallels@parallels-Parallels-Virtual-Platform> # Relates users to stacks
-users_insert [users] 2022-04-01T01:07:12Z derp <parallels@parallels-Parallels-Virtual-Platform> # Adds users insert proc
-accounts [schema_derp_books stacks] 2022-04-01T02:51:29Z derp <parallels@parallels-Parallels-Virtual-Platform> # Adds accounts table
-journal_entries [schema_derp_books stacks] 2022-04-01T03:28:24Z derp <parallels@parallels-Parallels-Virtual-Platform> # Adds journal entries table
+schema/derp_books 2022-04-02T22:17:14Z derp <derp@derp-Standard-PC-i440FX-PIIX-1996> # Adds derp books schema
+table/users [schema/derp_books] 2022-04-02T22:21:37Z derp <derp@derp-Standard-PC-i440FX-PIIX-1996> # Adds users table
+table/stacks [schema/derp_books] 2022-04-02T22:29:34Z derp <derp@derp-Standard-PC-i440FX-PIIX-1996> # Adds ownership with stacks table
+table/xref_users_stacks [schema/derp_books table/stacks table/users] 2022-04-02T23:37:27Z derp <derp@derp-Standard-PC-i440FX-PIIX-1996> # Adds user and stack tenancy
+table/accounts [schema/derp_books table/stacks] 2022-04-02T23:40:57Z derp <derp@derp-Standard-PC-i440FX-PIIX-1996> # Adds accounts table
+table/journal_entries [schema/derp_books table/stacks table/accounts] 2022-04-02T23:48:35Z derp <derp@derp-Standard-PC-i440FX-PIIX-1996> # Adds journal entries table
+procedure/insert_user [schema/derp_books table/users] 2022-04-02T23:50:31Z derp <derp@derp-Standard-PC-i440FX-PIIX-1996> # Implements user creation

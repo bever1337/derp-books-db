@@ -1,5 +1,5 @@
--- Deploy derp-books-db:users to pg
--- requires: schema_derp_books
+-- Deploy derp-books-db:table/users to pg
+-- requires: schema/derp_books
 
 BEGIN;
 

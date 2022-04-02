@@ -1,4 +1,4 @@
--- Revert derp-books-db:accounts from pg
+-- Revert derp-books-db:table/accounts from pg
 
 BEGIN;
 

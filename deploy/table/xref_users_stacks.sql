@@ -1,7 +1,7 @@
--- Deploy derp-books-db:xref_users_stacks to pg
--- requires: schema_derp_books
--- requires: stacks
--- requires: users
+-- Deploy derp-books-db:table/xref_users_stacks to pg
+-- requires: schema/derp_books
+-- requires: table/stacks
+-- requires: table/users
 
 BEGIN;
 

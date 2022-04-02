@@ -1,4 +1,4 @@
--- Verify derp-books-db:users on pg
+-- Verify derp-books-db:table/users on pg
 
 BEGIN;
 

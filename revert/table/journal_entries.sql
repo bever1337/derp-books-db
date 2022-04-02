@@ -1,4 +1,4 @@
--- Revert derp-books-db:journal_entries from pg
+-- Revert derp-books-db:table/journal_entries from pg
 
 BEGIN;
 

@@ -1,4 +1,4 @@
--- Revert derp-books-db:stacks from pg
+-- Revert derp-books-db:table/stacks from pg
 
 BEGIN;
 

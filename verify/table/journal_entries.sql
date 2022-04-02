@@ -1,4 +1,4 @@
--- Verify derp-books-db:journal_entries on pg
+-- Verify derp-books-db:table/journal_entries on pg
 
 BEGIN;
 

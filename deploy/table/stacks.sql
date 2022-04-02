@@ -1,5 +1,5 @@
--- Deploy derp-books-db:stacks to pg
--- requires: schema_derp_books
+-- Deploy derp-books-db:table/stacks to pg
+-- requires: schema/derp_books
 
 BEGIN;
 
