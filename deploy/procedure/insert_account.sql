@@ -15,7 +15,7 @@ BEGIN
   INSERT INTO derp_books.accounts (
     account_name,
     account_type,
-    stack_name,
+    stack_name
   ) VALUES (
     in_account_name,
     in_account_type,
