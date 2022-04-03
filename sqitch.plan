@@ -9,3 +9,6 @@ table/xref_users_stacks [schema/derp_books table/stacks table/users] 2022-04-02T
 table/accounts [schema/derp_books table/stacks] 2022-04-02T23:40:57Z derp <derp@derp-Standard-PC-i440FX-PIIX-1996> # Adds accounts table
 table/journal_entries [schema/derp_books table/stacks table/accounts] 2022-04-02T23:48:35Z derp <derp@derp-Standard-PC-i440FX-PIIX-1996> # Adds journal entries table
 procedure/insert_user [schema/derp_books table/users] 2022-04-02T23:50:31Z derp <derp@derp-Standard-PC-i440FX-PIIX-1996> # Implements user creation
+procedure/insert_user_stack [schema/derp_books table/stacks table/users table/xref_users_stacks] 2022-04-03T00:03:52Z derp <beverly.boydston@bboydston-mbp.local> # Creates new stack with associated user
+procedure/insert_account [schema/derp_books table/accounts table/stacks table/journal_entries] 2022-04-03T00:08:37Z derp <beverly.boydston@bboydston-mbp.local> # Creates new account associated with stack
+procedure/insert_journal_entry [schema/derp_books table/stacks table/accounts] 2022-04-03T00:44:40Z derp <beverly.boydston@bboydston-mbp.local> # Adds recording journal entries

@@ -8,8 +8,8 @@ CREATE TYPE derp_books.account_types AS ENUM ('assets', 'equity', 'expenses', 'l
 
 CREATE TABLE derp_books.accounts (
   account_name VARCHAR(255) NOT NULL,
-  stack_name VARCHAR(255) NOT NULL,
   account_type derp_books.account_types NOT NULL,
+  stack_name VARCHAR(255) NOT NULL,
   CONSTRAINT fk_accounts_stack_name
     FOREIGN KEY(stack_name)
       REFERENCES derp_books.stacks(stack_name)
