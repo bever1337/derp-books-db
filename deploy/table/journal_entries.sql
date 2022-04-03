@@ -8,8 +8,8 @@ BEGIN;
 CREATE TABLE derp_books.journal_entries (
   credit VARCHAR(255) NOT NULL,
   debit VARCHAR(255) NOT NULL,
-  row_no BIGSERIAL,
   stack_name VARCHAR(255) NOT NULL,
+  surrogate_id BIGSERIAL,
   CONSTRAINT fk_journal_entries_credit
     FOREIGN KEY(credit, stack_name)
       REFERENCES derp_books.accounts(account_name, stack_name)
@@ -23,7 +23,7 @@ CREATE TABLE derp_books.journal_entries (
       REFERENCES derp_books.stacks(stack_name)
       ON DELETE CASCADE,
   CONSTRAINT pk_journal_entries
-    PRIMARY KEY (row_no, stack_name)
+    PRIMARY KEY (surrogate_id)
 );
 
 COMMIT;
