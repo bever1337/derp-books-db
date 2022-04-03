@@ -17,6 +17,7 @@ $$ LANGUAGE plpgsql;
 SELECT (
   account_name,
   account_type,
+  general_ledger_name,
   stack_name
 ) FROM derp_books.accounts WHERE FALSE;
 

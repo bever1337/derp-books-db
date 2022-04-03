@@ -1,27 +1,24 @@
--- Deploy derp-books-db:table/accounts to pg
+-- Deploy derp-books-db:table/general_journals to pg
 -- requires: schema/derp_books
 -- requires: table/general_ledgers
 -- requires: table/stacks
 
 BEGIN;
 
-CREATE TYPE derp_books.account_types AS ENUM ('assets', 'equity', 'expenses', 'liabilities', 'revenue');
-
-CREATE TABLE derp_books.accounts (
-  account_name VARCHAR(255) NOT NULL,
-  account_type derp_books.account_types NOT NULL,
+CREATE TABLE derp_books.general_journals (
+  general_journal_name VARCHAR(255) NOT NULL,
   general_ledger_name VARCHAR(255) NOT NULL,
   stack_name VARCHAR(255) NOT NULL,
-  CONSTRAINT fk_accounts_general_ledger_name
+  CONSTRAINT fk_general_journals_general_ledger_name
     FOREIGN KEY(general_ledger_name, stack_name)
       REFERENCES derp_books.general_ledgers(general_ledger_name, stack_name)
       ON DELETE CASCADE,
-  CONSTRAINT fk_accounts_stack_name
+  CONSTRAINT fk_general_journals_stack_name
     FOREIGN KEY(stack_name)
       REFERENCES derp_books.stacks(stack_name)
       ON DELETE CASCADE,
-  CONSTRAINT pk_accounts
-    PRIMARY KEY (account_name, general_ledger_name, stack_name)
+  CONSTRAINT pk_general_journals
+    PRIMARY KEY (general_journal_name, general_ledger_name, stack_name)
 );
 
 COMMIT;

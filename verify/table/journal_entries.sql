@@ -3,8 +3,10 @@
 BEGIN;
 
 SELECT
-  debit,
   credit,
+  debit,
+  general_journal_name,
+  general_ledger_name,
   stack_name,
   surrogate_id
 FROM derp_books.journal_entries WHERE FALSE;
