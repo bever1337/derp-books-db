@@ -5,7 +5,7 @@
 
 BEGIN;
 
-CREATE OR REPLACE PROCEDURE derp_books.insert_account(
+CREATE OR REPLACE PROCEDURE derp_books.insert_journal_entry(
   IN in_credit VARCHAR(255),
   IN in_debit VARCHAR(255),
   IN in_stack_name VARCHAR(255)
