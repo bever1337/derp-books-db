@@ -12,7 +12,7 @@ CREATE OR REPLACE PROCEDURE derp_books.insert_user_stack(
 ) LANGUAGE plpgsql AS $$
 BEGIN
   INSERT INTO derp_books.stacks ( stack_name ) VALUES ( in_stack_name );
-  INSERT INTO derp_books.xref_users_stacks ( email, stack_name ) VALUES ( in_email, in_stack_name );
+  INSERT INTO derp_books.users_stacks ( email, stack_name ) VALUES ( in_email, in_stack_name );
 END;
 $$;
 
