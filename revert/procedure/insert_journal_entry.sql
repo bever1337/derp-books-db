@@ -2,6 +2,6 @@
 
 BEGIN;
 
--- XXX Add DDLs here.
+DROP PROCEDURE derp_books.insert_journal_entry;
 
 COMMIT;
