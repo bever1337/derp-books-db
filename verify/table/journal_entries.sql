@@ -5,8 +5,8 @@ BEGIN;
 SELECT
   debit,
   credit,
-  row_no,
-  stack_name 
+  stack_name,
+  surrogate_id
 FROM derp_books.journal_entries WHERE FALSE;
 
 ROLLBACK;
