@@ -14,7 +14,7 @@ BEGIN
   INSERT INTO derp_books.accounts (
     credit,
     debit,
-    stack_name,
+    stack_name
   ) VALUES (
     in_credit,
     in_debit,
