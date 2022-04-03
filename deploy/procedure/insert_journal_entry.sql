@@ -22,4 +22,5 @@ BEGIN
   );
 END;
 $$;
+
 COMMIT;
