@@ -8,9 +8,8 @@ table/stacks [schema/derp_books] 2022-04-02T22:19:14Z derp <derp@derp-Standard-P
 table/xref_users_stacks [schema/derp_books table/stacks table/users] 2022-04-02T22:20:14Z derp <derp@derp-Standard-PC-i440FX-PIIX-1996> # Adds user and stack tenancy
 table/general_ledgers [schema/derp_books table/stacks] 2022-04-02T22:21:14Z derp <derp@derp-Standard-PC-i440FX-PIIX-1996l> # Adds general ledgers
 table/accounts [schema/derp_books table/general_ledgers table/stacks] 2022-04-02T22:22:14Z derp <derp@derp-Standard-PC-i440FX-PIIX-1996> # Adds accounts table
-table/general_journals [schema/derp_books table/general_ledgers table/stacks] 2022-04-02T22:23:14Z derp <derp@derp-Standard-PC-i440FX-PIIX-1996l> # Adds general journals
-table/journal_entries [schema/derp_books table/accounts table/general_journals table/general_ledgers table/stacks] 2022-04-02T22:24:14Z derp <derp@derp-Standard-PC-i440FX-PIIX-1996> # Adds journal entries table
+table/journal_entries [schema/derp_books table/accounts table/general_ledgers table/stacks] 2022-04-02T22:24:14Z derp <derp@derp-Standard-PC-i440FX-PIIX-1996> # Adds journal entries table
 procedure/insert_user [schema/derp_books table/users] 2022-04-02T22:25:14Z derp <derp@derp-Standard-PC-i440FX-PIIX-1996> # Implements user creation
 procedure/insert_user_stack [schema/derp_books table/stacks table/users table/xref_users_stacks] 2022-04-02T22:26:14Z derp <derp@derp-Standard-PC-i440FX-PIIX-1996l> # Creates new stack with associated user
 procedure/insert_account [schema/derp_books table/accounts table/general_ledgers table/journal_entries table/stacks] 2022-04-02T22:27:14Z derp <derp@derp-Standard-PC-i440FX-PIIX-1996l> # Creates new account associated with stack
-procedure/insert_journal_entry [schema/derp_books table/accounts table/general_journals table/general_ledgers table/journal_entries table/stacks] 2022-04-02T22:28:14Z derp <derp@derp-Standard-PC-i440FX-PIIX-1996l> # Adds recording journal entries
+procedure/insert_journal_entry [schema/derp_books table/accounts table/general_ledgers table/journal_entries table/stacks] 2022-04-02T22:28:14Z derp <derp@derp-Standard-PC-i440FX-PIIX-1996l> # Adds recording journal entries
