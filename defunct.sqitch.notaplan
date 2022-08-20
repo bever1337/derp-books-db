@@ -1,0 +1,4 @@
+table/journal_entries [schema/derp_books table/accounts table/general_ledgers table/stacks] 2022-04-02T22:24:14Z derp <derp@derp-Standard-PC-i440FX-PIIX-1996> # Adds journal entries table
+procedure/insert_journal_entry [schema/derp_books table/accounts table/general_ledgers table/journal_entries table/stacks] 2022-04-02T22:28:14Z derp <derp@derp-Standard-PC-i440FX-PIIX-1996l> # Adds recording journal entries
+functions/select_user [schema/derp_books table/users] 2022-04-04T05:57:36Z derp <beverly.boydston@bboydston-mbp.local> # Supports querying user
+functions/select_user_stacks [schema/derp_books table/stacks table/users table/xref_users_stacks] 2022-04-04T15:05:11Z derp <beverly.boydston@bboydston-mbp.local> # Supports querying user stacks

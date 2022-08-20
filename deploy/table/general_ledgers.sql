@@ -5,6 +5,7 @@
 BEGIN;
 
 CREATE TABLE derp_books.general_ledgers (
+  fractions BIGINT NOT NULL,
   general_ledger_name VARCHAR(255) NOT NULL,
   stack_name VARCHAR(255) NOT NULL,
   CONSTRAINT fk_general_ledgers_stack_name

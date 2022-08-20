@@ -5,6 +5,6 @@ BEGIN;
 ALTER TABLE derp_books.accounts DROP CONSTRAINT fk_accounts_stack_name;
 DROP TABLE derp_books.accounts;
 
-DROP TYPE derp_books.account_types;
+-- DROP TYPE derp_books.account_types;
 
 COMMIT;

@@ -5,11 +5,11 @@
 
 BEGIN;
 
-CREATE TYPE derp_books.account_types AS ENUM ('assets', 'equity', 'expenses', 'liabilities', 'revenue');
+-- CREATE TYPE derp_books.account_types AS ENUM ('assets', 'equity', 'expenses', 'liabilities', 'revenue');
 
 CREATE TABLE derp_books.accounts (
   account_name VARCHAR(255) NOT NULL,
-  account_type derp_books.account_types NOT NULL,
+  -- account_type derp_books.account_types NOT NULL,
   general_ledger_name VARCHAR(255) NOT NULL,
   stack_name VARCHAR(255) NOT NULL,
   CONSTRAINT fk_accounts_general_ledger_name

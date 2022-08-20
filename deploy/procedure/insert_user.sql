@@ -2,6 +2,8 @@
 -- requires: schema/derp_books
 -- requires: table/users
 
+-- todo: This isn't an identity service. User table is only for dev
+
 BEGIN;
 
 CREATE OR REPLACE PROCEDURE derp_books.insert_user(
