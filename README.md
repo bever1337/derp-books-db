@@ -13,3 +13,11 @@
 Ideas:
 
 1. A ledger 'template' would allow enforcing currency between ledgers, linking ledger accounts
+
+pagination supports size, before, after parameters
+
+- page
+  - size
+  - before
+  - after
+- sort

@@ -10,9 +10,15 @@ beforeAll(() => {
 
 afterAll(() => pool.end());
 
-describe("PROCEDURE derp_books.insert_user", () => {
+describe("Users Table", () => {
   it("Supports inserting users for development", async () => {
     await pool.query(`CALL derp_books.insert_user('example@example.com');`);
+  });
+
+  it("Applies unique constraint to email", async () => {
+    await expect(
+      pool.query(`CALL derp_books.insert_user('example@example.com');`)
+    ).rejects.toThrow();
   });
 });
 
@@ -22,20 +28,41 @@ describe("PROCEDURE derp_books.insert_user_stack", () => {
       `CALL derp_books.insert_user_stack('example@example.com', 'stacks on stacks');`
     );
   });
+
+  it("Throws if user does not exist", async () => {
+    await expect(
+      pool.query(
+        `CALL derp_books.insert_user_stack('badexample@example.com', 'stacks on stacks v2');`
+      )
+    ).rejects.toThrow();
+  });
 });
 
 describe("PROCEDURE derp_books.insert_general_ledger", () => {
   it("Supports inserting stack-scoped general ledgers", async () => {
     await pool.query(
-      `CALL derp_books.insert_general_ledger(0, 'the book', 'stacks on stacks');`
+      `CALL derp_books.insert_general_ledger(0, 'the book', 'stacks on stacks', 'example@example.com');`
     );
+    await expect(() =>
+      pool.query(
+        `CALL derp_books.insert_general_ledger(0, 'the book', 'stacks on stacks', 'badexample@example.com');`
+      )
+    ).rejects.toThrow();
   });
 });
 
 describe("PROCEDURE derp_books.insert_account", () => {
   it("Supports inserting ledger-scoped accounts", async () => {
     await pool.query(
-      `CALL derp_books.insert_account('my parents', 'the book', 'stacks on stacks');`
+      `CALL derp_books.insert_account('my parents', 'the book', 'stacks on stacks', 'example@example.com');`
     );
+  });
+
+  it("Requires user-stack authorization", async () => {
+    await expect(() =>
+      pool.query(
+        `CALL derp_books.insert_general_ledger(0, 'the book', 'stacks on stacks', 'badexample@example.com');`
+      )
+    ).rejects.toThrow();
   });
 });
