@@ -12,3 +12,4 @@ table/general_ledgers [schema/derp_books table/stacks] 2022-04-02T22:21:14Z derp
 procedure/insert_general_ledger [schema/derp_books table/stacks] 2022-08-19T20:11:49Z derp <beverly.boydston@bboydston-mbp.local> # Inserts general ledger
 table/accounts [schema/derp_books table/general_ledgers table/stacks] 2022-04-02T22:22:14Z derp <derp@derp-Standard-PC-i440FX-PIIX-1996> # Adds accounts table
 procedure/insert_account [schema/derp_books table/accounts table/general_ledgers table/stacks] 2022-04-02T22:27:14Z derp <derp@derp-Standard-PC-i440FX-PIIX-1996l> # Creates new account associated with stack
+functions/page_general_ledger_accounts [schema/derp_books table/stacks table/general_ledgers] 2022-08-20T02:19:47Z derp <beverly.boydston@bboydston-mbp.local> # Queries chart of accounts
